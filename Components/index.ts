@@ -45,4 +45,42 @@ const user: Res<User> = {
     },
     status: 200
 }
-console.log(user);
+// console.log(user);
+
+type testing<B> = {
+    data: B,
+    status: number
+}
+
+type B = {
+    name: string;
+    age: number;
+}
+
+const hi: testing<B> = {
+    data: {
+        name:'hello',
+        age: 20
+    },
+    status: 200
+
+}
+ // console.log(hi);
+
+
+type Amount = {
+    currency: string;
+    value: number;
+}
+
+function printAmount(amt: Amount) {
+    console.log(amt);
+}
+
+const donation = {
+    currency: "USD",
+    value: 12.0,
+    description: "Lorem ipsum dolor sit amet",
+}
+
+printAmount(donation)
